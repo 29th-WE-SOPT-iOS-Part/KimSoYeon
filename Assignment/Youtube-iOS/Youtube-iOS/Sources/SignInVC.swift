@@ -10,7 +10,7 @@ import SnapKit
 
 class SignInVC: UIViewController {
 
-    // MARK: - Properties
+    // MARK: - UI
     
     let logoLabel = UILabel()
     let titleLabel = UILabel()

@@ -10,7 +10,7 @@ import SnapKit
 
 class SignUpVC: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - UI
     
     let logoLabel = UILabel()
     let titleLabel = UILabel()
@@ -21,6 +21,8 @@ class SignUpVC: UIViewController {
     
     let showPasswordButton = UIButton()
     let nextButton = UIButton()
+    
+    // MARK: - Properties
     
     private var isShow = false
 
@@ -36,6 +38,8 @@ class SignUpVC: UIViewController {
         hideKeyboardWhenTappedAround()
     }
 }
+
+// MARK: - Custom Methods
 
 extension SignUpVC {
     func initUI() {

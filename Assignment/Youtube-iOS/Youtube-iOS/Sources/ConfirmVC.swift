@@ -10,11 +10,13 @@ import SnapKit
 
 class ConfirmVC: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - UI
     
     let logoLabel = UILabel()
     let welcomeLabel = UILabel()
     let confirmButton = UIButton()
+    
+    // MARK: - Properties
     
     var userName: String?
     
