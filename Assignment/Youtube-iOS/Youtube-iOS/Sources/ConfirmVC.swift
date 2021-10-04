@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ConfirmVC: UIViewController {
     
@@ -25,8 +26,9 @@ class ConfirmVC: UIViewController {
         initUI()
         setConstraints()
     }
-    
 }
+
+// MARK: - Custom Methods
 
 extension ConfirmVC {
     func initUI() {
@@ -36,14 +38,14 @@ extension ConfirmVC {
         logoLabel.font = .boldSystemFont(ofSize: 25)
         
         if let name = userName {
-            welcomeLabel.text = "\(name)\n환영합니다!"
+            welcomeLabel.text = "\(name)님\n환영합니다!"
         }
         welcomeLabel.font = .boldSystemFont(ofSize: 20)
         welcomeLabel.numberOfLines = 2
         welcomeLabel.textAlignment = .center
         
         confirmButton.setTitle("확인", for: .normal)
-        confirmButton.backgroundColor = UIColor(hexString: "#4285F4")
+        confirmButton.backgroundColor = .googleBlue
         confirmButton.layer.cornerRadius = 10
         confirmButton.layer.masksToBounds = true
     }
@@ -69,9 +71,11 @@ extension ConfirmVC {
     }
 }
 
+// MARK: - @objc
+
 extension ConfirmVC {
     @objc
     func touchUpConfirm() {
-        print("확인 버튼 누름")
+        // 확인 버튼 눌렀을 때
     }
 }

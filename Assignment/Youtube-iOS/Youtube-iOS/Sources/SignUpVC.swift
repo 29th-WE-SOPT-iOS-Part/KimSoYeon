@@ -21,8 +21,11 @@ class SignUpVC: UIViewController {
     
     let showPasswordButton = UIButton()
     let nextButton = UIButton()
+    
+    private var isShow = false
 
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +33,7 @@ class SignUpVC: UIViewController {
         setConstraints()
         
         setTextField()
+        hideKeyboardWhenTappedAround()
     }
 }
 
@@ -44,19 +48,43 @@ extension SignUpVC {
         titleLabel.font = .boldSystemFont(ofSize: 20)
         
         nameTextField.placeholder = "이름을 입력해주세요."
+        nameTextField.layer.borderColor = UIColor.gray.cgColor
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.cornerRadius = 8
+        nameTextField.setLeftPaddingPoints(20)
+        nameTextField.setRightPaddingPoints(20)
+    
         contactTextField.placeholder = "이메일 또는 휴대전화"
+        contactTextField.layer.borderColor = UIColor.gray.cgColor
+        contactTextField.layer.borderWidth = 0.5
+        contactTextField.layer.cornerRadius = 8
+        contactTextField.setLeftPaddingPoints(20)
+        contactTextField.setRightPaddingPoints(20)
+        
         passwordTextField.placeholder = "비밀번호 입력"
+        passwordTextField.layer.borderColor = UIColor.gray.cgColor
+        passwordTextField.layer.borderWidth = 0.5
+        passwordTextField.layer.cornerRadius = 8
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
-        
-        showPasswordButton.setTitle("비밀번호 표시", for: .normal)
-        showPasswordButton.setTitleColor(.black, for: .normal)
+        passwordTextField.setLeftPaddingPoints(20)
+        passwordTextField.setRightPaddingPoints(20)
         
         nextButton.setTitle("다음", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
-        nextButton.backgroundColor = UIColor(hexString: "#4285F4")
+        nextButton.backgroundColor = .googleBlue
         nextButton.layer.cornerRadius = 8
         nextButton.layer.masksToBounds = true
+        nextButton.isEnabled = false
+        
+        var configuration = UIButton.Configuration.plain()
+        configuration.image = UIImage(systemName: "square")
+        configuration.titlePadding = 10
+        configuration.imagePadding = 10
+        configuration.baseForegroundColor = .lightGray
+        configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+        showPasswordButton.configuration = configuration
+        showPasswordButton.addTarget(self, action: #selector(touchUpShowPassword), for: .touchUpInside)
     }
     
     func setConstraints() {
@@ -76,32 +104,31 @@ extension SignUpVC {
         
         nameTextField.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(50)
-            make.height.equalTo(80)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.height.equalTo(40)
         }
         
         contactTextField.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(50)
-            make.height.equalTo(80)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.height.equalTo(40)
         }
         
         passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(contactTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(50)
-            make.height.equalTo(80)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.height.equalTo(40)
         }
         
         showPasswordButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(10)
-            make.leading.equalToSuperview().inset(50)
+            make.leading.equalToSuperview().inset(30)
         }
         
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(showPasswordButton.snp.bottom).offset(60)
-            make.leading.trailing.equalToSuperview().inset(50)
+            make.leading.trailing.equalToSuperview().inset(30)
         }
-        nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }
 
@@ -109,30 +136,33 @@ extension SignUpVC {
 
 extension SignUpVC {
     @objc
-    func touchUpNext() {
-        if nameTextField.hasText, contactTextField.hasText, passwordTextField.hasText {
-            let confirmVC = ConfirmVC()
-            confirmVC.userName = self.nameTextField.text
-            confirmVC.modalPresentationStyle = .fullScreen
-            self.present(confirmVC, animated: true, completion: {
-                self.nameTextField.text = nil
-                self.contactTextField.text = nil
-                self.passwordTextField.text = nil
-            })
+    private func touchUpShowPassword() {
+        if !isShow {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "checkmark.square.fill")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .googleBlue
+            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            showPasswordButton.configuration = configuration
+            
+            passwordTextField.isSecureTextEntry = false
         } else {
-            let alert = UIAlertController(title: "회원가입 실패",
-                                          message: "모두 입력해주세요. 😭",
-                                          preferredStyle: UIAlertController.Style.alert)
-            let closeAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-            alert.addAction(closeAction)
-            present(alert, animated: true, completion: {
-                self.nameTextField.text = nil
-                self.contactTextField.text = nil
-                self.passwordTextField.text = nil
-            })
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "square")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .lightGray
+            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            showPasswordButton.configuration = configuration
+            
+            passwordTextField.isSecureTextEntry = true
         }
+        isShow.toggle()
     }
 }
+
+// MARK: - UITextField Delegate
 
 extension SignUpVC: UITextFieldDelegate {
     func setTextField() {
@@ -144,5 +174,15 @@ extension SignUpVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.text != "" && contactTextField.text != "" && passwordTextField.text != "" {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = .googleBlue
+        } else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .gray
+        }
     }
 }

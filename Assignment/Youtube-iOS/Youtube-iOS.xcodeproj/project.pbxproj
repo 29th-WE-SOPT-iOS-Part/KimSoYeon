@@ -14,10 +14,12 @@
 		92882D942709A09900580348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92882D932709A09900580348 /* Assets.xcassets */; };
 		92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92882D952709A09900580348 /* LaunchScreen.storyboard */; };
 		92882DA02709A25800580348 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92882D9F2709A25800580348 /* SnapKit */; };
-		92882DA62709D80000580348 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DA52709D80000580348 /* UIView+Extensions.swift */; };
-		92882DA82709DF8200580348 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DA72709DF8200580348 /* UIColor+Extension.swift */; };
+		92882DA62709D80000580348 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DA52709D80000580348 /* UIView+.swift */; };
+		92882DA82709DF8200580348 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DA72709DF8200580348 /* UIColor+.swift */; };
 		92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAA2709E2EA00580348 /* SignUpVC.swift */; };
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
+		92882DAF270AABF200580348 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAE270AABF200580348 /* UIViewController+.swift */; };
+		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +31,12 @@
 		92882D932709A09900580348 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92882D962709A09900580348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92882D982709A09900580348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92882DA52709D80000580348 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		92882DA72709DF8200580348 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		92882DA52709D80000580348 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		92882DA72709DF8200580348 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		92882DAA2709E2EA00580348 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
+		92882DAE270AABF200580348 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,10 @@
 		92882DA42709D7EB00580348 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				92882DA52709D80000580348 /* UIView+Extensions.swift */,
-				92882DA72709DF8200580348 /* UIColor+Extension.swift */,
+				92882DA52709D80000580348 /* UIView+.swift */,
+				92882DA72709DF8200580348 /* UIColor+.swift */,
+				92882DAE270AABF200580348 /* UIViewController+.swift */,
+				92882DB0270AAF1300580348 /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,13 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92882DAF270AABF200580348 /* UIViewController+.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
-				92882DA62709D80000580348 /* UIView+Extensions.swift in Sources */,
+				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
+				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
-				92882DA82709DF8200580348 /* UIColor+Extension.swift in Sources */,
+				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
