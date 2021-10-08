@@ -18,7 +18,6 @@
 		92882DA82709DF8200580348 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DA72709DF8200580348 /* UIColor+.swift */; };
 		92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAA2709E2EA00580348 /* SignUpVC.swift */; };
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
-		92882DAF270AABF200580348 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAE270AABF200580348 /* UIViewController+.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		92882DA72709DF8200580348 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		92882DAA2709E2EA00580348 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
-		92882DAE270AABF200580348 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +110,6 @@
 			children = (
 				92882DA52709D80000580348 /* UIView+.swift */,
 				92882DA72709DF8200580348 /* UIColor+.swift */,
-				92882DAE270AABF200580348 /* UIViewController+.swift */,
 				92882DB0270AAF1300580348 /* UITextField+.swift */,
 			);
 			path = Extensions;
@@ -204,7 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92882DAF270AABF200580348 /* UIViewController+.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,

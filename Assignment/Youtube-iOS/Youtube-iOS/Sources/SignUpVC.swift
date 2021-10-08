@@ -35,7 +35,10 @@ class SignUpVC: UIViewController {
         setConstraints()
         
         setTextField()
-        hideKeyboardWhenTappedAround()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
 }
 
@@ -76,7 +79,7 @@ extension SignUpVC {
         
         nextButton.setTitle("다음", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
-        nextButton.backgroundColor = .googleBlue
+        nextButton.backgroundColor = .gray
         nextButton.layer.cornerRadius = 8
         nextButton.layer.masksToBounds = true
         nextButton.isEnabled = false
@@ -133,6 +136,7 @@ extension SignUpVC {
             make.top.equalTo(showPasswordButton.snp.bottom).offset(60)
             make.leading.trailing.equalToSuperview().inset(30)
         }
+        nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }
 
@@ -163,6 +167,18 @@ extension SignUpVC {
             passwordTextField.isSecureTextEntry = true
         }
         isShow.toggle()
+    }
+    
+    @objc
+    private func touchUpNext() {
+        let dvc = ConfirmVC()
+        dvc.userName = nameTextField.text
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true) {
+            self.nameTextField.text = nil
+            self.contactTextField.text = nil
+            self.passwordTextField.text = nil
+        }
     }
 }
 

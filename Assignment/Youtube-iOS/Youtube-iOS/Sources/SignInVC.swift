@@ -8,6 +8,16 @@
 import UIKit
 import SnapKit
 
+struct Credentials {
+    var userName: String
+    var password: String
+}
+
+enum KeychainError: Error {
+    case unexpectedPasswordStatus
+    case duplicatePasswordKeyValue
+}
+
 class SignInVC: UIViewController {
 
     // MARK: - UI
@@ -37,7 +47,10 @@ class SignInVC: UIViewController {
         setConstraints()
         
         setTextField()
-        hideKeyboardWhenTappedAround()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
 }
 
@@ -142,6 +155,7 @@ extension SignInVC {
             make.trailing.equalToSuperview().inset(30)
             make.width.equalTo(70)
         }
+        nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }
 
@@ -152,6 +166,18 @@ extension SignInVC {
     func touchUpCreate() {
         let dvc = SignUpVC()
         self.navigationController?.pushViewController(dvc, animated: true)
+    }
+    
+    @objc
+    private func touchUpNext() {
+        let dvc = ConfirmVC()
+        dvc.userName = nameTextField.text
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true) {
+            self.nameTextField.text = nil
+            self.contactTextField.text = nil
+            self.passwordTextField.text = nil
+        }
     }
 }
 
