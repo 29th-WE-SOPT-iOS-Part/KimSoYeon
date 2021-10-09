@@ -79,5 +79,6 @@ extension ConfirmVC {
     @objc
     func touchUpConfirm() {
         // 확인 버튼 눌렀을 때
+        self.dismiss(animated: true, completion: nil)
     }
 }
