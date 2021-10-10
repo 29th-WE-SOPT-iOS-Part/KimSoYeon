@@ -58,18 +58,25 @@ extension SignUpVC {
         nameTextField.layer.borderColor = UIColor.gray.cgColor
         nameTextField.layer.borderWidth = 0.5
         nameTextField.layer.cornerRadius = 8
+        nameTextField.setLeftPaddingPoints(20)
+        nameTextField.setRightPaddingPoints(20)
     
         contactTextField.placeholder = "이메일 또는 휴대전화"
         contactTextField.layer.borderColor = UIColor.gray.cgColor
         contactTextField.layer.borderWidth = 0.5
         contactTextField.layer.cornerRadius = 8
+        contactTextField.setLeftPaddingPoints(20)
+        contactTextField.setRightPaddingPoints(20)
         
         passwordTextField.placeholder = "비밀번호 입력"
         passwordTextField.layer.borderColor = UIColor.gray.cgColor
         passwordTextField.layer.borderWidth = 0.5
         passwordTextField.layer.cornerRadius = 8
         passwordTextField.textContentType = .password
-        passwordTextField.isSecureTextEntry = true        
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.setLeftPaddingPoints(20)
+        passwordTextField.setRightPaddingPoints(20)
+        
         nextButton.setTitle("다음", for: .normal)
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.backgroundColor = .gray
