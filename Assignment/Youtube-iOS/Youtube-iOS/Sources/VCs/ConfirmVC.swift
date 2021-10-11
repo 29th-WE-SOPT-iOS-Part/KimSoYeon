@@ -27,6 +27,7 @@ class ConfirmVC: UIViewController {
 
         initUI()
         setConstraints()
+        setAddTargetAction()
     }
 }
 
@@ -69,6 +70,9 @@ extension ConfirmVC {
             make.top.equalTo(welcomeLabel.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(50)
         }
+    }
+    
+    func setAddTargetAction(){
         confirmButton.addTarget(self, action: #selector(touchUpConfirm), for: .touchUpInside)
     }
 }

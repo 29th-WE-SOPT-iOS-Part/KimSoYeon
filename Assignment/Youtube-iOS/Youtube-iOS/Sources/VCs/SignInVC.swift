@@ -8,16 +8,6 @@
 import UIKit
 import SnapKit
 
-struct Credentials {
-    var userName: String
-    var password: String
-}
-
-enum KeychainError: Error {
-    case unexpectedPasswordStatus
-    case duplicatePasswordKeyValue
-}
-
 class SignInVC: UIViewController {
 
     // MARK: - UI
@@ -26,9 +16,9 @@ class SignInVC: UIViewController {
     let titleLabel = UILabel()
     let descriptionlabel = UILabel()
     
-    let nameTextField = UITextField()
-    let contactTextField = UITextField()
-    let passwordTextField = UITextField()
+    let nameTextField = SignTextField(placeholder: "이름을 입력해주세요.")
+    let contactTextField = SignTextField(placeholder: "이메일 또는 휴대전화")
+    let passwordTextField = SignTextField(placeholder: "비밀번호 입력")
     
     let creatAccountButton = UIButton()
     let nextButton = UIButton()
@@ -45,8 +35,8 @@ class SignInVC: UIViewController {
         
         initUI()
         setConstraints()
-        
         setTextField()
+        setAddTargetAction()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -72,28 +62,8 @@ extension SignInVC {
         descriptionlabel.textColor = .gray
         descriptionlabel.textAlignment = .center
         
-        nameTextField.placeholder = "이름을 입력해주세요."
-        nameTextField.layer.borderColor = UIColor.gray.cgColor
-        nameTextField.layer.borderWidth = 0.5
-        nameTextField.layer.cornerRadius = 8
-        nameTextField.setLeftPaddingPoints(20)
-        nameTextField.setRightPaddingPoints(20)
-    
-        contactTextField.placeholder = "이메일 또는 휴대전화"
-        contactTextField.layer.borderColor = UIColor.gray.cgColor
-        contactTextField.layer.borderWidth = 0.5
-        contactTextField.layer.cornerRadius = 8
-        contactTextField.setLeftPaddingPoints(20)
-        contactTextField.setRightPaddingPoints(20)
-        
-        passwordTextField.placeholder = "비밀번호 입력"
-        passwordTextField.layer.borderColor = UIColor.gray.cgColor
-        passwordTextField.layer.borderWidth = 0.5
-        passwordTextField.layer.cornerRadius = 8
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.setLeftPaddingPoints(20)
-        passwordTextField.setRightPaddingPoints(20)
         
         creatAccountButton.setTitle("계정 만들기", for: .normal)
         creatAccountButton.setTitleColor(.googleBlue, for: .normal)
@@ -148,13 +118,17 @@ extension SignInVC {
             make.top.equalTo(passwordTextField.snp.bottom).offset(70)
             make.leading.equalToSuperview().inset(30)
         }
-        creatAccountButton.addTarget(self, action: #selector(touchUpCreate), for: .touchUpInside)
         
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(70)
             make.trailing.equalToSuperview().inset(30)
             make.width.equalTo(70)
         }
+    }
+    
+    func setAddTargetAction() {
+        creatAccountButton.addTarget(self, action: #selector(touchUpCreate), for: .touchUpInside)
+        
         nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }
@@ -196,7 +170,7 @@ extension SignInVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.text != "" && contactTextField.text != "" && passwordTextField.text != "" {
+        if nameTextField.hasText && contactTextField.hasText && passwordTextField.hasText {
             nextButton.isEnabled = true
             nextButton.backgroundColor = .googleBlue
         } else {
