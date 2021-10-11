@@ -8,16 +8,6 @@
 import UIKit
 import SnapKit
 
-struct Credentials {
-    var userName: String
-    var password: String
-}
-
-enum KeychainError: Error {
-    case unexpectedPasswordStatus
-    case duplicatePasswordKeyValue
-}
-
 class SignInVC: UIViewController {
 
     // MARK: - UI
@@ -45,8 +35,8 @@ class SignInVC: UIViewController {
         
         initUI()
         setConstraints()
-        
         setTextField()
+        setAddTargetAction()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -148,13 +138,17 @@ extension SignInVC {
             make.top.equalTo(passwordTextField.snp.bottom).offset(70)
             make.leading.equalToSuperview().inset(30)
         }
-        creatAccountButton.addTarget(self, action: #selector(touchUpCreate), for: .touchUpInside)
         
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(70)
             make.trailing.equalToSuperview().inset(30)
             make.width.equalTo(70)
         }
+    }
+    
+    func setAddTargetAction() {
+        creatAccountButton.addTarget(self, action: #selector(touchUpCreate), for: .touchUpInside)
+        
         nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }

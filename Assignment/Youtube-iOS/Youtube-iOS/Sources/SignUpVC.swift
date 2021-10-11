@@ -33,8 +33,8 @@ class SignUpVC: UIViewController {
 
         initUI()
         setConstraints()
-        
         setTextField()
+        setAddTargetAction()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -91,7 +91,6 @@ extension SignUpVC {
         configuration.baseForegroundColor = .lightGray
         configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
         showPasswordButton.configuration = configuration
-        showPasswordButton.addTarget(self, action: #selector(touchUpShowPassword), for: .touchUpInside)
     }
     
     func setConstraints() {
@@ -136,6 +135,11 @@ extension SignUpVC {
             make.top.equalTo(showPasswordButton.snp.bottom).offset(60)
             make.leading.trailing.equalToSuperview().inset(30)
         }
+    }
+    
+    func setAddTargetAction() {
+        showPasswordButton.addTarget(self, action: #selector(touchUpShowPassword), for: .touchUpInside)
+        
         nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
 }
@@ -197,7 +201,7 @@ extension SignUpVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.text != "" && contactTextField.text != "" && passwordTextField.text != "" {
+        if nameTextField.hasText && contactTextField.hasText && passwordTextField.hasText {
             nextButton.isEnabled = true
             nextButton.backgroundColor = .googleBlue
         } else {
