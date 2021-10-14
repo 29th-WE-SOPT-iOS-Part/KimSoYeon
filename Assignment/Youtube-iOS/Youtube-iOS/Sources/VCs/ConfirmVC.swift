@@ -81,6 +81,8 @@ extension ConfirmVC {
     
     func setAddTargetAction(){
         confirmButton.addTarget(self, action: #selector(touchUpConfirm), for: .touchUpInside)
+        
+        switchAccountButton.addTarget(self, action: #selector(touchUpSwitchAccount), for: .touchUpInside)
     }
 }
 
@@ -89,6 +91,16 @@ extension ConfirmVC {
 extension ConfirmVC {
     @objc
     func touchUpConfirm() {
+        guard let presentingVC = self.presentingViewController else { return }
+        
+        let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
+        self.dismiss(animated: true) {
+            navigationController?.popToRootViewController(animated: false)
+        }
+    }
+    
+    @objc
+    func touchUpSwitchAccount() {
         guard let presentingVC = self.presentingViewController else { return }
         
         let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
