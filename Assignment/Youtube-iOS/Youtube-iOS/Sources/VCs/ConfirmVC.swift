@@ -89,7 +89,11 @@ extension ConfirmVC {
 extension ConfirmVC {
     @objc
     func touchUpConfirm() {
-        // 확인 버튼 눌렀을 때
-        self.dismiss(animated: true, completion: nil)
+        guard let presentingVC = self.presentingViewController else { return }
+        
+        let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
+        self.dismiss(animated: true) {
+            navigationController?.popToRootViewController(animated: false)
+        }
     }
 }
