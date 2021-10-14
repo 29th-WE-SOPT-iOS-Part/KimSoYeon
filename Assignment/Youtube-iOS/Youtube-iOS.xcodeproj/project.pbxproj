@@ -20,6 +20,12 @@
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
+		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
+		92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F9271897DF00D1F975 /* HomeVC.swift */; };
+		92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FB2718982400D1F975 /* ShortsVC.swift */; };
+		92F740FE2718987000D1F975 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FD2718987000D1F975 /* AddVC.swift */; };
+		92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FF2718992300D1F975 /* SubscriptionsVC.swift */; };
+		92F741022718999D00D1F975 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F741012718999D00D1F975 /* LibraryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		92F740F9271897DF00D1F975 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		92F740FB2718982400D1F975 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
+		92F740FD2718987000D1F975 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		92F740FF2718992300D1F975 /* SubscriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsVC.swift; sourceTree = "<group>"; };
+		92F741012718999D00D1F975 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +66,13 @@
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				92882D8E2709A09600580348 /* SignInVC.swift */,
-				92882DAA2709E2EA00580348 /* SignUpVC.swift */,
-				92882DAC2709E41A00580348 /* ConfirmVC.swift */,
+				92F740F62718978E00D1F975 /* Login */,
+				92F740F42718966600D1F975 /* TabBarController.swift */,
+				92F740F9271897DF00D1F975 /* HomeVC.swift */,
+				92F740FB2718982400D1F975 /* ShortsVC.swift */,
+				92F740FD2718987000D1F975 /* AddVC.swift */,
+				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
+				92F741012718999D00D1F975 /* LibraryVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -143,6 +159,16 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
+		92F740F62718978E00D1F975 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				92882D8E2709A09600580348 /* SignInVC.swift */,
+				92882DAA2709E2EA00580348 /* SignUpVC.swift */,
+				92882DAC2709E41A00580348 /* ConfirmVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,13 +248,19 @@
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
+				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
+				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
+				92F740F52718966600D1F975 /* TabBarController.swift in Sources */,
+				92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
+				92F740FE2718987000D1F975 /* AddVC.swift in Sources */,
 				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
+				92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

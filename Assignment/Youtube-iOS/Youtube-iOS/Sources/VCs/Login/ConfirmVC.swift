@@ -91,12 +91,10 @@ extension ConfirmVC {
 extension ConfirmVC {
     @objc
     func touchUpConfirm() {
-        guard let presentingVC = self.presentingViewController else { return }
-        
-        let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
-        self.dismiss(animated: true) {
-            navigationController?.popToRootViewController(animated: false)
-        }
+        let dvc = TabBarController()
+        dvc.modalPresentationStyle = .fullScreen
+        dvc.modalTransitionStyle = .coverVertical
+        self.present(dvc, animated: true, completion: nil)
     }
     
     @objc
