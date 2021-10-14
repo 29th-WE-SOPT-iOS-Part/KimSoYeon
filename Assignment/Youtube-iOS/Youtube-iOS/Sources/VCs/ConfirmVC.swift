@@ -14,7 +14,7 @@ class ConfirmVC: UIViewController {
     
     let logoLabel = UILabel()
     let welcomeLabel = UILabel()
-    let confirmButton = UIButton()
+    let confirmButton = ConfirmButton(text: "확인", isEnabled: true)
     
     // MARK: - Properties
     
@@ -46,11 +46,6 @@ extension ConfirmVC {
         welcomeLabel.font = .boldSystemFont(ofSize: 20)
         welcomeLabel.numberOfLines = 2
         welcomeLabel.textAlignment = .center
-        
-        confirmButton.setTitle("확인", for: .normal)
-        confirmButton.backgroundColor = .googleBlue
-        confirmButton.layer.cornerRadius = 10
-        confirmButton.layer.masksToBounds = true
     }
     
     func setConstraints() {

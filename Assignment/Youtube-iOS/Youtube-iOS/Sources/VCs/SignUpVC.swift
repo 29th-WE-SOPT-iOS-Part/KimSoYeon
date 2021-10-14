@@ -20,7 +20,7 @@ class SignUpVC: UIViewController {
     let passwordTextField = SignTextField(placeholder: "비밀번호 입력")
     
     let showPasswordButton = UIButton()
-    let nextButton = UIButton()
+    let nextButton = ConfirmButton(text: "다음", isEnabled: false)
     
     // MARK: - Properties
     
@@ -56,13 +56,6 @@ extension SignUpVC {
         
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
-        
-        nextButton.setTitle("다음", for: .normal)
-        nextButton.setTitleColor(.white, for: .normal)
-        nextButton.backgroundColor = .gray
-        nextButton.layer.cornerRadius = 8
-        nextButton.layer.masksToBounds = true
-        nextButton.isEnabled = false
         
         var configuration = UIButton.Configuration.plain()
         configuration.image = UIImage(systemName: "square")

@@ -21,7 +21,7 @@ class SignInVC: UIViewController {
     let passwordTextField = SignTextField(placeholder: "비밀번호 입력")
     
     let creatAccountButton = UIButton()
-    let nextButton = UIButton()
+    let nextButton = ConfirmButton(text: "다음", isEnabled: false)
     
     // MARK: - Life Cycle
     
@@ -67,13 +67,6 @@ extension SignInVC {
         
         creatAccountButton.setTitle("계정 만들기", for: .normal)
         creatAccountButton.setTitleColor(.googleBlue, for: .normal)
-        
-        nextButton.setTitle("다음", for: .normal)
-        nextButton.setTitleColor(.white, for: .normal)
-        nextButton.backgroundColor = .gray
-        nextButton.layer.cornerRadius = 8
-        nextButton.layer.masksToBounds = true
-        nextButton.isEnabled = false
     }
     
     func setConstraints() {
