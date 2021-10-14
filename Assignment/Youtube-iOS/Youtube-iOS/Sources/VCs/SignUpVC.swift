@@ -12,7 +12,12 @@ class SignUpVC: UIViewController {
     
     // MARK: - UI
     
-    let logoLabel = UILabel()
+    let logoImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "image170")
+        return imageView
+    }()
+    
     let titleLabel = UILabel()
     
     let nameTextField = SignTextField(placeholder: "이름을 입력해주세요.")
@@ -48,11 +53,8 @@ extension SignUpVC {
     func initUI() {
         view.backgroundColor = .white
         
-        logoLabel.text = "Google"
-        logoLabel.font = .boldSystemFont(ofSize: 25)
-        
         titleLabel.text = "회원가입"
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .systemFont(ofSize: 22, weight: .semibold)
         
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
@@ -67,46 +69,46 @@ extension SignUpVC {
     }
     
     func setConstraints() {
-        view.addSubviews([logoLabel, titleLabel,
+        view.addSubviews([logoImage, titleLabel,
                           nameTextField, contactTextField, passwordTextField,
                           showPasswordButton, nextButton])
         
-        logoLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+        logoImage.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(128)
             make.centerX.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoLabel.snp.bottom).offset(20)
+            make.top.equalTo(logoImage.snp.bottom).offset(23)
             make.centerX.equalToSuperview()
         }
         
         nameTextField.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.top.equalTo(titleLabel.snp.bottom).offset(128)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         contactTextField.snp.makeConstraints { make in
-            make.top.equalTo(nameTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.top.equalTo(nameTextField.snp.bottom).offset(17)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(contactTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.top.equalTo(contactTextField.snp.bottom).offset(17)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         showPasswordButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(10)
-            make.leading.equalToSuperview().inset(30)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(14)
+            make.leading.equalToSuperview().inset(22)
         }
         
         nextButton.snp.makeConstraints { make in
-            make.top.equalTo(showPasswordButton.snp.bottom).offset(60)
-            make.leading.trailing.equalToSuperview().inset(30)
+            make.top.equalTo(showPasswordButton.snp.bottom).offset(29)
+            make.leading.trailing.equalToSuperview().inset(22)
         }
     }
     

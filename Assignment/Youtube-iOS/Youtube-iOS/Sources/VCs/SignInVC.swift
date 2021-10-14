@@ -12,7 +12,12 @@ class SignInVC: UIViewController {
 
     // MARK: - UI
     
-    let logoLabel = UILabel()
+    let logoImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "image170")
+        return imageView
+    }()
+    
     let titleLabel = UILabel()
     let descriptionlabel = UILabel()
     
@@ -50,72 +55,70 @@ extension SignInVC {
     func initUI() {
         view.backgroundColor = .white
         
-        logoLabel.text = "Google"
-        logoLabel.font = .boldSystemFont(ofSize: 25)
-        
         titleLabel.text = "로그인"
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .systemFont(ofSize: 22, weight: .semibold)
         
-        descriptionlabel.text = "Continue to YouTube. You'll also sign in\nto Google services in your apps & Safari."
+        descriptionlabel.text = "Youtube로 이동하여 계속하세요.\n앱 및 Safari에서도 Google 서비스에 로그인됩니다."
         descriptionlabel.numberOfLines = 2
-        descriptionlabel.font = .systemFont(ofSize: 13)
-        descriptionlabel.textColor = .gray
+        descriptionlabel.font = .systemFont(ofSize: 14, weight: .regular)
+        descriptionlabel.textColor = .darkGray
         descriptionlabel.textAlignment = .center
         
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
         
         creatAccountButton.setTitle("계정 만들기", for: .normal)
+        creatAccountButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
         creatAccountButton.setTitleColor(.googleBlue, for: .normal)
     }
     
     func setConstraints() {
-        view.addSubviews([logoLabel, titleLabel, descriptionlabel,
+        view.addSubviews([logoImage, titleLabel, descriptionlabel,
                           nameTextField, contactTextField, passwordTextField,
                           creatAccountButton, nextButton])
         
-        logoLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+        logoImage.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(128)
             make.centerX.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoLabel.snp.bottom).offset(20)
+            make.top.equalTo(logoImage.snp.bottom).offset(22)
             make.centerX.equalToSuperview()
         }
         
         descriptionlabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(30)
+            make.top.equalTo(titleLabel.snp.bottom).offset(14)
             make.centerX.equalToSuperview()
         }
         
         nameTextField.snp.makeConstraints { make in
-            make.top.equalTo(descriptionlabel.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.top.equalTo(descriptionlabel.snp.bottom).offset(68)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         contactTextField.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(contactTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.top.equalTo(contactTextField.snp.bottom).offset(17)
+            make.leading.trailing.equalToSuperview().inset(22)
+            make.height.equalTo(48)
         }
         
         creatAccountButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(70)
-            make.leading.equalToSuperview().inset(30)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(73)
+            make.leading.equalToSuperview().inset(22)
         }
         
         nextButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(70)
-            make.trailing.equalToSuperview().inset(30)
-            make.width.equalTo(70)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(64)
+            make.trailing.equalToSuperview().inset(22)
+            make.width.equalTo(74)
         }
     }
     

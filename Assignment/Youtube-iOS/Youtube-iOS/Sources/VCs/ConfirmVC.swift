@@ -12,9 +12,15 @@ class ConfirmVC: UIViewController {
     
     // MARK: - UI
     
-    let logoLabel = UILabel()
+    let logoImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "image170")
+        return imageView
+    }()
+    
     let welcomeLabel = UILabel()
     let confirmButton = ConfirmButton(text: "확인", isEnabled: true)
+    let switchAccountButton = UIButton()
     
     // MARK: - Properties
     
@@ -37,33 +43,39 @@ extension ConfirmVC {
     func initUI() {
         view.backgroundColor = .white
         
-        logoLabel.text = "Google"
-        logoLabel.font = .boldSystemFont(ofSize: 25)
-        
         if let name = userName {
             welcomeLabel.text = "\(name)님\n환영합니다!"
         }
-        welcomeLabel.font = .boldSystemFont(ofSize: 20)
+        welcomeLabel.font = .systemFont(ofSize: 26, weight: .semibold)
         welcomeLabel.numberOfLines = 2
         welcomeLabel.textAlignment = .center
+        
+        switchAccountButton.setTitle("다른 계정으로 로그인하기", for: .normal)
+        switchAccountButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+        switchAccountButton.setTitleColor(.googleBlue, for: .normal)
     }
     
     func setConstraints() {
-        view.addSubviews([logoLabel, welcomeLabel, confirmButton])
+        view.addSubviews([logoImage, welcomeLabel, confirmButton, switchAccountButton])
         
-        logoLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+        logoImage.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(257)
             make.centerX.equalToSuperview()
         }
         
         welcomeLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoLabel.snp.bottom).offset(20)
+            make.top.equalTo(logoImage.snp.bottom).offset(14)
             make.centerX.equalToSuperview()
         }
         
         confirmButton.snp.makeConstraints { make in
-            make.top.equalTo(welcomeLabel.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(50)
+            make.top.equalTo(welcomeLabel.snp.bottom).offset(53)
+            make.leading.trailing.equalToSuperview().inset(22)
+        }
+        
+        switchAccountButton.snp.makeConstraints { make in
+            make.top.equalTo(confirmButton.snp.bottom).offset(23)
+            make.centerX.equalToSuperview()
         }
     }
     

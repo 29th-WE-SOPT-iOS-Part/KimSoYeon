@@ -37,5 +37,7 @@ class ConfirmButton: UIButton {
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 8
         layer.masksToBounds = true
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: 48).isActive = true
     }
 }
