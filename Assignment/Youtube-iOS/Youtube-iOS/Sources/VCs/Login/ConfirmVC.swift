@@ -99,11 +99,9 @@ extension ConfirmVC {
     
     @objc
     func touchUpSwitchAccount() {
-        guard let presentingVC = self.presentingViewController else { return }
-        
-        let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
+        guard let parentVC = presentingViewController as? UINavigationController else { return }
         self.dismiss(animated: true) {
-            navigationController?.popToRootViewController(animated: false)
+            parentVC.popToRootViewController(animated: true)
         }
     }
 }
