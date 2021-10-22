@@ -66,13 +66,9 @@
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				928BC50A2722828F00F0EA1E /* Youtube */,
 				92F740F62718978E00D1F975 /* Login */,
 				92F740F42718966600D1F975 /* TabBarController.swift */,
-				92F740F9271897DF00D1F975 /* HomeVC.swift */,
-				92F740FB2718982400D1F975 /* ShortsVC.swift */,
-				92F740FD2718987000D1F975 /* AddVC.swift */,
-				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
-				92F741012718999D00D1F975 /* LibraryVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -157,6 +153,18 @@
 				92882D8C2709A09600580348 /* SceneDelegate.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		928BC50A2722828F00F0EA1E /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				92F740F9271897DF00D1F975 /* HomeVC.swift */,
+				92F740FB2718982400D1F975 /* ShortsVC.swift */,
+				92F740FD2718987000D1F975 /* AddVC.swift */,
+				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
+				92F741012718999D00D1F975 /* LibraryVC.swift */,
+			);
+			path = Youtube;
 			sourceTree = "<group>";
 		};
 		92F740F62718978E00D1F975 /* Login */ = {
