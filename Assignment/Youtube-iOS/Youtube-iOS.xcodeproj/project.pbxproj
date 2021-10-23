@@ -11,7 +11,6 @@
 		92882D8B2709A09600580348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8A2709A09600580348 /* AppDelegate.swift */; };
 		92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8C2709A09600580348 /* SceneDelegate.swift */; };
 		92882D8F2709A09600580348 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8E2709A09600580348 /* SignInVC.swift */; };
-		92882D922709A09600580348 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92882D902709A09600580348 /* Main.storyboard */; };
 		92882D942709A09900580348 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92882D932709A09900580348 /* Assets.xcassets */; };
 		92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92882D952709A09900580348 /* LaunchScreen.storyboard */; };
 		92882DA02709A25800580348 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92882D9F2709A25800580348 /* SnapKit */; };
@@ -20,6 +19,13 @@
 		92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAA2709E2EA00580348 /* SignUpVC.swift */; };
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
+		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
+		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
+		92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F9271897DF00D1F975 /* HomeVC.swift */; };
+		92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FB2718982400D1F975 /* ShortsVC.swift */; };
+		92F740FE2718987000D1F975 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FD2718987000D1F975 /* AddVC.swift */; };
+		92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FF2718992300D1F975 /* SubscriptionsVC.swift */; };
+		92F741022718999D00D1F975 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F741012718999D00D1F975 /* LibraryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +34,6 @@
 		92882D8A2709A09600580348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92882D8C2709A09600580348 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92882D8E2709A09600580348 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		92882D912709A09600580348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92882D932709A09900580348 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92882D962709A09900580348 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92882D982709A09900580348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +42,13 @@
 		92882DAA2709E2EA00580348 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		92F740F9271897DF00D1F975 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		92F740FB2718982400D1F975 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
+		92F740FD2718987000D1F975 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		92F740FF2718992300D1F975 /* SubscriptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsVC.swift; sourceTree = "<group>"; };
+		92F741012718999D00D1F975 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +66,9 @@
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				92882D8E2709A09600580348 /* SignInVC.swift */,
-				92882DAA2709E2EA00580348 /* SignUpVC.swift */,
-				92882DAC2709E41A00580348 /* ConfirmVC.swift */,
+				928BC50A2722828F00F0EA1E /* Youtube */,
+				92F740F62718978E00D1F975 /* Login */,
+				92F740F42718966600D1F975 /* TabBarController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -65,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				926AEB5827143A2F00E274D8 /* SignTextField.swift */,
+				92A982D927185C70006C75CB /* ConfirmButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -108,7 +121,6 @@
 		92882DA22709A3B200580348 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				92882D902709A09600580348 /* Main.storyboard */,
 				92882D932709A09900580348 /* Assets.xcassets */,
 				92882D952709A09900580348 /* LaunchScreen.storyboard */,
 			);
@@ -141,6 +153,28 @@
 				92882D8C2709A09600580348 /* SceneDelegate.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		928BC50A2722828F00F0EA1E /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				92F740F9271897DF00D1F975 /* HomeVC.swift */,
+				92F740FB2718982400D1F975 /* ShortsVC.swift */,
+				92F740FD2718987000D1F975 /* AddVC.swift */,
+				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
+				92F741012718999D00D1F975 /* LibraryVC.swift */,
+			);
+			path = Youtube;
+			sourceTree = "<group>";
+		};
+		92F740F62718978E00D1F975 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				92882D8E2709A09600580348 /* SignInVC.swift */,
+				92882DAA2709E2EA00580348 /* SignUpVC.swift */,
+				92882DAC2709E41A00580348 /* ConfirmVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +243,6 @@
 			files = (
 				92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */,
 				92882D942709A09900580348 /* Assets.xcassets in Resources */,
-				92882D922709A09600580348 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,29 +253,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
+				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
+				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
+				92F740F52718966600D1F975 /* TabBarController.swift in Sources */,
+				92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
+				92F740FE2718987000D1F975 /* AddVC.swift in Sources */,
 				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
+				92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92882D902709A09600580348 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92882D912709A09600580348 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92882D952709A09900580348 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -382,7 +414,6 @@
 				INFOPLIST_FILE = "Youtube-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,7 +441,6 @@
 				INFOPLIST_FILE = "Youtube-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
