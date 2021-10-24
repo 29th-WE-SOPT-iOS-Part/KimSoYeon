@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1D42725BEC800A3941D /* VideoTVC.swift */; };
+		9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9228A1D52725BEC800A3941D /* VideoTVC.xib */; };
+		9228A1DA2725BF0400A3941D /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1D82725BF0400A3941D /* ChannelCVC.swift */; };
+		9228A1DB2725BF0400A3941D /* ChannelCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9228A1D92725BF0400A3941D /* ChannelCVC.xib */; };
 		926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AEB5827143A2F00E274D8 /* SignTextField.swift */; };
 		92882D8B2709A09600580348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8A2709A09600580348 /* AppDelegate.swift */; };
 		92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8C2709A09600580348 /* SceneDelegate.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9228A1D42725BEC800A3941D /* VideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTVC.swift; sourceTree = "<group>"; };
+		9228A1D52725BEC800A3941D /* VideoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTVC.xib; sourceTree = "<group>"; };
+		9228A1D82725BF0400A3941D /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
+		9228A1D92725BF0400A3941D /* ChannelCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCVC.xib; sourceTree = "<group>"; };
 		926AEB5827143A2F00E274D8 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
 		92882D872709A09600580348 /* Youtube-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92882D8A2709A09600580348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9228A1D02725BE5F00A3941D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				92F740F9271897DF00D1F975 /* HomeVC.swift */,
+				92F740FB2718982400D1F975 /* ShortsVC.swift */,
+				92F740FD2718987000D1F975 /* AddVC.swift */,
+				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
+				92F741012718999D00D1F975 /* LibraryVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		9228A1D12725BE6900A3941D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1D32725BE8600A3941D /* CVC */,
+				9228A1D22725BE7F00A3941D /* TVC */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9228A1D22725BE7F00A3941D /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1D42725BEC800A3941D /* VideoTVC.swift */,
+				9228A1D52725BEC800A3941D /* VideoTVC.xib */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		9228A1D32725BE8600A3941D /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1D82725BF0400A3941D /* ChannelCVC.swift */,
+				9228A1D92725BF0400A3941D /* ChannelCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,11 +205,8 @@
 		928BC50A2722828F00F0EA1E /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
-				92F740F9271897DF00D1F975 /* HomeVC.swift */,
-				92F740FB2718982400D1F975 /* ShortsVC.swift */,
-				92F740FD2718987000D1F975 /* AddVC.swift */,
-				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
-				92F741012718999D00D1F975 /* LibraryVC.swift */,
+				9228A1D12725BE6900A3941D /* Cells */,
+				9228A1D02725BE5F00A3941D /* VCs */,
 			);
 			path = Youtube;
 			sourceTree = "<group>";
@@ -241,8 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9228A1DB2725BF0400A3941D /* ChannelCVC.xib in Resources */,
 				92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */,
 				92882D942709A09900580348 /* Assets.xcassets in Resources */,
+				9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +304,8 @@
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
+				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,
+				9228A1DA2725BF0400A3941D /* ChannelCVC.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
