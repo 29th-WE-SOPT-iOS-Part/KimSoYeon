@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1D42725BEC800A3941D /* VideoTVC.swift */; };
 		9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9228A1D52725BEC800A3941D /* VideoTVC.xib */; };
-		9228A1DA2725BF0400A3941D /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1D82725BF0400A3941D /* ChannelCVC.swift */; };
-		9228A1DB2725BF0400A3941D /* ChannelCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9228A1D92725BF0400A3941D /* ChannelCVC.xib */; };
+		9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1DD2725C13E00A3941D /* VideoDataModel.swift */; };
+		9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1DF2725CC1300A3941D /* ChannelCVC.swift */; };
+		9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1E12725CEB500A3941D /* ChannelDataModel.swift */; };
+		9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1E32725D1C600A3941D /* SortCVC.swift */; };
 		926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AEB5827143A2F00E274D8 /* SignTextField.swift */; };
 		92882D8B2709A09600580348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8A2709A09600580348 /* AppDelegate.swift */; };
 		92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8C2709A09600580348 /* SceneDelegate.swift */; };
@@ -35,8 +37,10 @@
 /* Begin PBXFileReference section */
 		9228A1D42725BEC800A3941D /* VideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTVC.swift; sourceTree = "<group>"; };
 		9228A1D52725BEC800A3941D /* VideoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTVC.xib; sourceTree = "<group>"; };
-		9228A1D82725BF0400A3941D /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
-		9228A1D92725BF0400A3941D /* ChannelCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCVC.xib; sourceTree = "<group>"; };
+		9228A1DD2725C13E00A3941D /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
+		9228A1DF2725CC1300A3941D /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
+		9228A1E12725CEB500A3941D /* ChannelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDataModel.swift; sourceTree = "<group>"; };
+		9228A1E32725D1C600A3941D /* SortCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCVC.swift; sourceTree = "<group>"; };
 		926AEB5827143A2F00E274D8 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
 		92882D872709A09600580348 /* Youtube-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92882D8A2709A09600580348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,10 +108,19 @@
 		9228A1D32725BE8600A3941D /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				9228A1D82725BF0400A3941D /* ChannelCVC.swift */,
-				9228A1D92725BF0400A3941D /* ChannelCVC.xib */,
+				9228A1DF2725CC1300A3941D /* ChannelCVC.swift */,
+				9228A1E32725D1C600A3941D /* SortCVC.swift */,
 			);
 			path = CVC;
+			sourceTree = "<group>";
+		};
+		9228A1DC2725C12F00A3941D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1DD2725C13E00A3941D /* VideoDataModel.swift */,
+				9228A1E12725CEB500A3941D /* ChannelDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		926AEB56271439F700E274D8 /* VCs */ = {
@@ -159,6 +172,7 @@
 		92882DA12709A3AB00580348 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9228A1DC2725C12F00A3941D /* Models */,
 				926AEB57271439FF00E274D8 /* Classes */,
 				926AEB56271439F700E274D8 /* VCs */,
 			);
@@ -285,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9228A1DB2725BF0400A3941D /* ChannelCVC.xib in Resources */,
 				92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */,
 				92882D942709A09900580348 /* Assets.xcassets in Resources */,
 				9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */,
@@ -299,15 +312,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */,
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
+				9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
 				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,
-				9228A1DA2725BF0400A3941D /* ChannelCVC.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
+				9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
+				9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
 				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
