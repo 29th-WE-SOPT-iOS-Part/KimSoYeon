@@ -49,6 +49,7 @@ extension ChannelCVC {
         
         channelLabel.textColor = .black
         channelLabel.font = .systemFont(ofSize: 12, weight: .regular)
+        channelLabel.textAlignment = .center
     }
     
     func setData(channelImage: String, channelName: String) {
