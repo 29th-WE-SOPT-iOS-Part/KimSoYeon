@@ -36,6 +36,8 @@ class VideoTVC: UITableViewCell {
 
 extension VideoTVC {
     func initUI() {
+        thumnailImageView.contentMode = .scaleAspectFill
+        
         titleLabel.numberOfLines = 2
         titleLabel.textColor = .black
         titleLabel.font = .systemFont(ofSize: 15, weight: .regular)

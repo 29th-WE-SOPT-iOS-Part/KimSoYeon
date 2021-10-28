@@ -13,7 +13,7 @@ class SortCVC: UICollectionViewCell {
     // MARK: - UI
     
     private var sortLabel = UILabel()
-    
+
     
     // MARK: - Life Cycle
     
@@ -38,11 +38,15 @@ extension SortCVC {
     func initUI() {
         contentView.addSubview(sortLabel)
         
+        layer.cornerRadius = 15
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.lightGray.cgColor
+        
         sortLabel.textColor = .black
         sortLabel.font = .systemFont(ofSize: 15, weight: .regular)
     }
     
-    func setData(sort: String) {
+    func setLabel(sort: String) {
         sortLabel.text = sort
     }
 }

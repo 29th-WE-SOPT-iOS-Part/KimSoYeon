@@ -14,13 +14,12 @@ class SubscriptionsVC: UIViewController {
     private var topView = UIView()
     
     private var logoImageView = UIImageView()
+    
     private var buttonStackView = UIStackView()
     private var windowSharingButton = UIButton()
     private var notificationButton = UIButton()
     private var searchButton = UIButton()
     private var profileButton = UIButton()
-    
-    private var videoTableView = UITableView()
     
     private var channelCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -39,6 +38,8 @@ class SubscriptionsVC: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
+    
+    private var videoTableView = UITableView()
 
     // MARK: - Properties
     
@@ -86,33 +87,33 @@ extension SubscriptionsVC {
     }
     
     private func setConstraints() {
-        view.addSubviews([topView, channelCollectionView, sortCollectionView, videoTableView])
-        topView.addSubviews([logoImageView, buttonStackView])
+        view.addSubviews([topView, videoTableView])
+        topView.addSubviews([logoImageView, buttonStackView, channelCollectionView, sortCollectionView])
         
         topView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(44)
+            make.height.equalTo(184)
         }
         
         logoImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
             make.leading.equalToSuperview().inset(16)
-            make.centerY.equalToSuperview()
             make.width.equalTo(96)
             make.height.equalTo(20)
         }
         
         buttonStackView.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(16)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(logoImageView.snp.centerY)
             make.width.equalTo(160)
         }
         
         channelCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(topView.snp.bottom)
+            make.top.equalTo(buttonStackView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(104)
         }
-        
+
         sortCollectionView.snp.makeConstraints { make in
             make.top.equalTo(channelCollectionView.snp.bottom)
             make.leading.trailing.equalToSuperview()
@@ -120,8 +121,8 @@ extension SubscriptionsVC {
         }
         
         videoTableView.snp.makeConstraints { make in
-            make.top.equalTo(sortCollectionView.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(topView.snp.bottom)
+            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -170,7 +171,15 @@ extension SubscriptionsVC {
         sortCollectionView.dataSource = self
         sortCollectionView.register(SortCVC.self, forCellWithReuseIdentifier: SortCVC.identifier)
     }
+    
+    private func setLabelWidth(index: Int) -> CGFloat {
+        let label = UILabel()
+        label.text = sortList[index]
+        label.sizeToFit()
+        return label.frame.width + 10 + 10
+    }
 }
+
 
 // MARK: - UITableView Delegate
 
@@ -202,24 +211,25 @@ extension SubscriptionsVC: UICollectionViewDelegateFlowLayout {
         if collectionView == channelCollectionView {
             return CGSize(width: 72, height: 104)
         } else {
-            // fix: text 길이에 맞게
-            return CGSize(width: 10, height: 30)
+            return CGSize(width: setLabelWidth(index: indexPath.item), height: 30)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == channelCollectionView {
-            return 0
-        } else {
-            return 10
-        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if  collectionView == sortCollectionView {
+            return 9
+        }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if  collectionView == sortCollectionView {
+            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        }
         return UIEdgeInsets.zero
     }
 }
@@ -240,7 +250,7 @@ extension SubscriptionsVC:  UICollectionViewDataSource {
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SortCVC.identifier, for: indexPath) as? SortCVC else { return UICollectionViewCell() }
-            cell.setData(sort: sortList[indexPath.row])
+            cell.setLabel(sort: sortList[indexPath.row])
             return cell
         }
     }
