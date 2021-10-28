@@ -7,10 +7,12 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.delegate = self
         
         initUI()
         setTabs()
@@ -19,8 +21,19 @@ class TabBarController: UITabBarController {
 
 extension TabBarController {
     func initUI() {
-        UITabBar.appearance().tintColor = UIColor.black
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 8)
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().tintColor = .black
+        
+        if #available(iOS 15, *) {
+            let appearance = UITabBarAppearance()
+            let tabBar = UITabBar()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            appearance.selectionIndicatorTintColor = .black
+            tabBar.standardAppearance = appearance;
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
     
     func setTabs() {
