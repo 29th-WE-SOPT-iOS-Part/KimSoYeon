@@ -12,7 +12,7 @@ class SubscriptionsVC: UIViewController {
     // MARK: - UI
     
     private var topView = TopView()
-    private var collectionViews = CollectionViews()
+    private var collectionViews = SubscriptionsHeaderView()
     
     private var videoTableView = UITableView()
 
