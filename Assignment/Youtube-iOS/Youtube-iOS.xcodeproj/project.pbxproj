@@ -27,7 +27,7 @@
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
 		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
-		92D8B565272A910A002AF0B0 /* CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* CollectionViews.swift */; };
+		92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
 		92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F9271897DF00D1F975 /* HomeVC.swift */; };
 		92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FB2718982400D1F975 /* ShortsVC.swift */; };
@@ -58,7 +58,7 @@
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		92D8B562272A8CE3002AF0B0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		92D8B564272A910A002AF0B0 /* CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViews.swift; sourceTree = "<group>"; };
+		92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsHeaderView.swift; sourceTree = "<group>"; };
 		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		92F740F9271897DF00D1F975 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		92F740FB2718982400D1F975 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				926AEB5827143A2F00E274D8 /* SignTextField.swift */,
 				92A982D927185C70006C75CB /* ConfirmButton.swift */,
 				92D8B562272A8CE3002AF0B0 /* TopView.swift */,
-				92D8B564272A910A002AF0B0 /* CollectionViews.swift */,
+				92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
-				92D8B565272A910A002AF0B0 /* CollectionViews.swift in Sources */,
+				92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */,
 				9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
 				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,

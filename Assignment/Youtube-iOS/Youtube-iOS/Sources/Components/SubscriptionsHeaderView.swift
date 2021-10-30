@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViews: UIView {
+class SubscriptionsHeaderView: UIView {
     
     // MARK: - UI
     
@@ -39,7 +39,6 @@ class CollectionViews: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        initUI()
         setConstraints()
         
         setData()
@@ -53,10 +52,12 @@ class CollectionViews: UIView {
     // MARK: - Custom Methods
     
     private func initUI() {
-        addSubviews([channelCollectionView, sortCollectionView])
+        self.backgroundColor = .systemBackground
     }
     
     private func setConstraints() {
+        addSubviews([channelCollectionView, sortCollectionView])
+        
         channelCollectionView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.height.equalTo(104)
@@ -106,7 +107,7 @@ class CollectionViews: UIView {
 
 // MARK: - UICollectionView Delegate
 
-extension CollectionViews: UICollectionViewDelegateFlowLayout {
+extension SubscriptionsHeaderView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == channelCollectionView {
             return CGSize(width: 72, height: 104)
@@ -136,7 +137,7 @@ extension CollectionViews: UICollectionViewDelegateFlowLayout {
 
 // MARK: - UICollectionView DataSource
 
-extension CollectionViews: UICollectionViewDataSource {
+extension SubscriptionsHeaderView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == channelCollectionView {
             return channelList.count
