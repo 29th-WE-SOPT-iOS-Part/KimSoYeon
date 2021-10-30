@@ -13,6 +13,10 @@
 		9233B8DB272CDCAF009134A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9233B8D9272CDCAF009134A3 /* Main.storyboard */; };
 		9233B8DD272CDCB0009134A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9233B8DC272CDCB0009134A3 /* Assets.xcassets */; };
 		9233B8E0272CDCB0009134A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9233B8DE272CDCB0009134A3 /* LaunchScreen.storyboard */; };
+		9233B908272D2B21009134A3 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B907272D2B21009134A3 /* APIConstants.swift */; };
+		9233B90A272D2B88009134A3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B909272D2B88009134A3 /* NetworkResult.swift */; };
+		9233B90C272D2BE2009134A3 /* LoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B90B272D2BE2009134A3 /* LoginResponseData.swift */; };
+		9233B90E272D2C59009134A3 /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B90D272D2C59009134A3 /* UserSignService.swift */; };
 		DFED6CFD98DE44DC4D0F3128 /* Pods_4th_Seminar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9079F537F62BCC1F25FA1305 /* Pods_4th_Seminar.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		9233B8DC272CDCB0009134A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9233B8DF272CDCB0009134A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9233B8E1272CDCB0009134A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9233B907272D2B21009134A3 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		9233B909272D2B88009134A3 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		9233B90B272D2BE2009134A3 /* LoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseData.swift; sourceTree = "<group>"; };
+		9233B90D272D2C59009134A3 /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
 		AA89D24910B4E5F3B7C9CAA7 /* Pods-4th-Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4th-Seminar.release.xcconfig"; path = "Target Support Files/Pods-4th-Seminar/Pods-4th-Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		FF15E679394BB3AF38C9B4A8 /* Pods-4th-Seminar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4th-Seminar.debug.xcconfig"; path = "Target Support Files/Pods-4th-Seminar/Pods-4th-Seminar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +56,6 @@
 				FF15E679394BB3AF38C9B4A8 /* Pods-4th-Seminar.debug.xcconfig */,
 				AA89D24910B4E5F3B7C9CAA7 /* Pods-4th-Seminar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +87,10 @@
 				9233B8DC272CDCB0009134A3 /* Assets.xcassets */,
 				9233B8DE272CDCB0009134A3 /* LaunchScreen.storyboard */,
 				9233B8E1272CDCB0009134A3 /* Info.plist */,
+				9233B907272D2B21009134A3 /* APIConstants.swift */,
+				9233B909272D2B88009134A3 /* NetworkResult.swift */,
+				9233B90B272D2BE2009134A3 /* LoginResponseData.swift */,
+				9233B90D272D2C59009134A3 /* UserSignService.swift */,
 			);
 			path = "4th-Seminar";
 			sourceTree = "<group>";
@@ -207,6 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9233B908272D2B21009134A3 /* APIConstants.swift in Sources */,
+				9233B90E272D2C59009134A3 /* UserSignService.swift in Sources */,
+				9233B90A272D2B88009134A3 /* NetworkResult.swift in Sources */,
+				9233B90C272D2BE2009134A3 /* LoginResponseData.swift in Sources */,
 				9233B8D8272CDCAF009134A3 /* ViewController.swift in Sources */,
 				9233B8D4272CDCAF009134A3 /* AppDelegate.swift in Sources */,
 				9233B8D6272CDCAF009134A3 /* SceneDelegate.swift in Sources */,
