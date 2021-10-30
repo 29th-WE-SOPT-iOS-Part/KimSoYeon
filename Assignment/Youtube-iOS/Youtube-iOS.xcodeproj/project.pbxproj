@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1D42725BEC800A3941D /* VideoTVC.swift */; };
+		9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9228A1D52725BEC800A3941D /* VideoTVC.xib */; };
+		9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1DD2725C13E00A3941D /* VideoDataModel.swift */; };
+		9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1DF2725CC1300A3941D /* ChannelCVC.swift */; };
+		9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1E12725CEB500A3941D /* ChannelDataModel.swift */; };
+		9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228A1E32725D1C600A3941D /* SortCVC.swift */; };
 		926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AEB5827143A2F00E274D8 /* SignTextField.swift */; };
 		92882D8B2709A09600580348 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8A2709A09600580348 /* AppDelegate.swift */; };
 		92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882D8C2709A09600580348 /* SceneDelegate.swift */; };
@@ -20,6 +26,8 @@
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
+		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
+		92D8B565272A910A002AF0B0 /* CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* CollectionViews.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
 		92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F9271897DF00D1F975 /* HomeVC.swift */; };
 		92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740FB2718982400D1F975 /* ShortsVC.swift */; };
@@ -29,6 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9228A1D42725BEC800A3941D /* VideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTVC.swift; sourceTree = "<group>"; };
+		9228A1D52725BEC800A3941D /* VideoTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTVC.xib; sourceTree = "<group>"; };
+		9228A1DD2725C13E00A3941D /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
+		9228A1DF2725CC1300A3941D /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
+		9228A1E12725CEB500A3941D /* ChannelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDataModel.swift; sourceTree = "<group>"; };
+		9228A1E32725D1C600A3941D /* SortCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCVC.swift; sourceTree = "<group>"; };
 		926AEB5827143A2F00E274D8 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
 		92882D872709A09600580348 /* Youtube-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92882D8A2709A09600580348 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,8 @@
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		92D8B562272A8CE3002AF0B0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		92D8B564272A910A002AF0B0 /* CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViews.swift; sourceTree = "<group>"; };
 		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		92F740F9271897DF00D1F975 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		92F740FB2718982400D1F975 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
@@ -63,6 +79,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9228A1D02725BE5F00A3941D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				92F740F9271897DF00D1F975 /* HomeVC.swift */,
+				92F740FB2718982400D1F975 /* ShortsVC.swift */,
+				92F740FD2718987000D1F975 /* AddVC.swift */,
+				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
+				92F741012718999D00D1F975 /* LibraryVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		9228A1D12725BE6900A3941D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1D32725BE8600A3941D /* CVC */,
+				9228A1D22725BE7F00A3941D /* TVC */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9228A1D22725BE7F00A3941D /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1D42725BEC800A3941D /* VideoTVC.swift */,
+				9228A1D52725BEC800A3941D /* VideoTVC.xib */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		9228A1D32725BE8600A3941D /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1DF2725CC1300A3941D /* ChannelCVC.swift */,
+				9228A1E32725D1C600A3941D /* SortCVC.swift */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		9228A1DC2725C12F00A3941D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9228A1DD2725C13E00A3941D /* VideoDataModel.swift */,
+				9228A1E12725CEB500A3941D /* ChannelDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,13 +137,15 @@
 			path = VCs;
 			sourceTree = "<group>";
 		};
-		926AEB57271439FF00E274D8 /* Classes */ = {
+		926AEB57271439FF00E274D8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				926AEB5827143A2F00E274D8 /* SignTextField.swift */,
 				92A982D927185C70006C75CB /* ConfirmButton.swift */,
+				92D8B562272A8CE3002AF0B0 /* TopView.swift */,
+				92D8B564272A910A002AF0B0 /* CollectionViews.swift */,
 			);
-			path = Classes;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		92882D7E2709A09600580348 = {
@@ -112,7 +178,8 @@
 		92882DA12709A3AB00580348 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				926AEB57271439FF00E274D8 /* Classes */,
+				9228A1DC2725C12F00A3941D /* Models */,
+				926AEB57271439FF00E274D8 /* Components */,
 				926AEB56271439F700E274D8 /* VCs */,
 			);
 			path = Sources;
@@ -158,11 +225,8 @@
 		928BC50A2722828F00F0EA1E /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
-				92F740F9271897DF00D1F975 /* HomeVC.swift */,
-				92F740FB2718982400D1F975 /* ShortsVC.swift */,
-				92F740FD2718987000D1F975 /* AddVC.swift */,
-				92F740FF2718992300D1F975 /* SubscriptionsVC.swift */,
-				92F741012718999D00D1F975 /* LibraryVC.swift */,
+				9228A1D12725BE6900A3941D /* Cells */,
+				9228A1D02725BE5F00A3941D /* VCs */,
 			);
 			path = Youtube;
 			sourceTree = "<group>";
@@ -243,6 +307,7 @@
 			files = (
 				92882D972709A09900580348 /* LaunchScreen.storyboard in Resources */,
 				92882D942709A09900580348 /* Assets.xcassets in Resources */,
+				9228A1D72725BEC800A3941D /* VideoTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,19 +318,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */,
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
+				92D8B565272A910A002AF0B0 /* CollectionViews.swift in Sources */,
+				9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */,
 				92882D8B2709A09600580348 /* AppDelegate.swift in Sources */,
+				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
+				9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
+				9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
 				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
 				92F740F52718966600D1F975 /* TabBarController.swift in Sources */,
 				92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
+				92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */,
 				92F740FE2718987000D1F975 /* AddVC.swift in Sources */,
 				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
 				92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */,
