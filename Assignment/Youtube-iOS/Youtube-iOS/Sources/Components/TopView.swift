@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol TopViewDelegate {
+    func didTapProfileIcon()
+}
+
 class TopView: UIView {
 
     // MARK: - UI
@@ -20,6 +24,10 @@ class TopView: UIView {
     private var searchButton = UIButton()
     private var profileButton = UIButton()
     
+    // MARK: - Properties
+    
+    var delegate: TopViewDelegate?
+    
     // MARK: - Initaliziers
     
     override init(frame: CGRect) {
@@ -27,6 +35,7 @@ class TopView: UIView {
         
         initUI()
         setConstraints()
+        setAction()
     }
     
     required init?(coder: NSCoder) {
@@ -71,5 +80,11 @@ class TopView: UIView {
             make.centerY.equalTo(logoImageView.snp.centerY)
             make.width.equalTo(160)
         }
+    }
+    
+    private func setAction() {
+        profileButton.addAction(UIAction(){ _ in
+            self.delegate?.didTapProfileIcon()
+        }, for: .touchUpInside)
     }
 }

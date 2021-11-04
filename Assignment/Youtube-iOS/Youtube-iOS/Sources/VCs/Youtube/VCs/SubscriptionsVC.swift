@@ -27,6 +27,8 @@ class SubscriptionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topView.delegate = self
+        
         initUI()
         setConstraints()
         
@@ -83,6 +85,17 @@ extension SubscriptionsVC {
         videoTableView.allowsSelection = false
     }
 }
+
+// MARK: - TopViewDelegate
+
+extension SubscriptionsVC: TopViewDelegate {
+    func didTapProfileIcon() {
+        let dvc = SignInVC()
+        dvc.modalPresentationStyle = .fullScreen
+        self.present(dvc, animated: true, completion: nil)
+    }
+}
+
 
 
 // MARK: - UITableView Delegate
