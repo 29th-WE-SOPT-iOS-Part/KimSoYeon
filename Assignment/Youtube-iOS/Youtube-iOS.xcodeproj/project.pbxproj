@@ -27,6 +27,7 @@
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
 		92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF261B272DBB13005D0AE0 /* UIWindow+.swift */; };
+		92B033CE273435DF0001190C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 92B033CD273435DF0001190C /* Alamofire */; };
 		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
 		92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
@@ -75,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92882DA02709A25800580348 /* SnapKit in Frameworks */,
+				92B033CE273435DF0001190C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +264,7 @@
 			name = "Youtube-iOS";
 			packageProductDependencies = (
 				92882D9F2709A25800580348 /* SnapKit */,
+				92B033CD273435DF0001190C /* Alamofire */,
 			);
 			productName = "Youtube-iOS";
 			productReference = 92882D872709A09600580348 /* Youtube-iOS.app */;
@@ -293,6 +296,7 @@
 			mainGroup = 92882D7E2709A09600580348;
 			packageReferences = (
 				92882D9E2709A25800580348 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				92B033CC273435DF0001190C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 92882D882709A09600580348 /* Products */;
 			projectDirPath = "";
@@ -564,6 +568,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		92B033CC273435DF0001190C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -571,6 +583,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92882D9E2709A25800580348 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		92B033CD273435DF0001190C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92B033CC273435DF0001190C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

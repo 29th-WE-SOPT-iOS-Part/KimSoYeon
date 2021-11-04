@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Alamofire
 
 class SubscriptionsVC: UIViewController {
     
