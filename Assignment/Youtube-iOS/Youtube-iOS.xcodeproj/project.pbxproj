@@ -26,6 +26,7 @@
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
+		92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF261B272DBB13005D0AE0 /* UIWindow+.swift */; };
 		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
 		92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
@@ -57,6 +58,7 @@
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		92AF261B272DBB13005D0AE0 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		92D8B562272A8CE3002AF0B0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsHeaderView.swift; sourceTree = "<group>"; };
 		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				92882DA52709D80000580348 /* UIView+.swift */,
 				92882DA72709DF8200580348 /* UIColor+.swift */,
 				92882DB0270AAF1300580348 /* UITextField+.swift */,
+				92AF261B272DBB13005D0AE0 /* UIWindow+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */,
+				92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
 				9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
