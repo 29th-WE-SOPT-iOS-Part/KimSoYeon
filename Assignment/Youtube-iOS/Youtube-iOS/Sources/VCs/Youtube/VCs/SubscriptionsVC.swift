@@ -90,7 +90,7 @@ extension SubscriptionsVC {
 
 extension SubscriptionsVC: TopViewDelegate {
     func didTapProfileIcon() {
-        let dvc = SignInVC()
+        let dvc = UINavigationController(rootViewController: SignInVC())
         dvc.modalPresentationStyle = .fullScreen
         self.present(dvc, animated: true, completion: nil)
     }

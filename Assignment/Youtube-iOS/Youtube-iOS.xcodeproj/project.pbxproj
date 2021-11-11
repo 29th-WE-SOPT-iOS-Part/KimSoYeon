@@ -28,6 +28,13 @@
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
 		92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF261B272DBB13005D0AE0 /* UIWindow+.swift */; };
 		92B033CE273435DF0001190C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 92B033CD273435DF0001190C /* Alamofire */; };
+		92D5C7E027365F0900F07EE5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7DF27365F0900F07EE5 /* APIConstants.swift */; };
+		92D5C7E22736601700F07EE5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E12736601700F07EE5 /* NetworkResult.swift */; };
+		92D5C7E62736628B00F07EE5 /* LoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */; };
+		92D5C7E8273669AD00F07EE5 /* UIViewcontroller+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */; };
+		92D5C80E2736DF2E00F07EE5 /* SignUpResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */; };
+		92D5C8102736E36300F07EE5 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C80F2736E36300F07EE5 /* SignInService.swift */; };
+		92D5C8122736E36C00F07EE5 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C8112736E36C00F07EE5 /* SignUpService.swift */; };
 		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
 		92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
@@ -60,6 +67,13 @@
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		92AF261B272DBB13005D0AE0 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
+		92D5C7DF27365F0900F07EE5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		92D5C7E12736601700F07EE5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseData.swift; sourceTree = "<group>"; };
+		92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+.swift"; sourceTree = "<group>"; };
+		92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseData.swift; sourceTree = "<group>"; };
+		92D5C80F2736E36300F07EE5 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		92D5C8112736E36C00F07EE5 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		92D8B562272A8CE3002AF0B0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsHeaderView.swift; sourceTree = "<group>"; };
 		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -134,9 +148,9 @@
 		926AEB56271439F700E274D8 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				92F740F42718966600D1F975 /* TabBarController.swift */,
 				928BC50A2722828F00F0EA1E /* Youtube */,
 				92F740F62718978E00D1F975 /* Login */,
-				92F740F42718966600D1F975 /* TabBarController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 		92882DA12709A3AB00580348 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92D5C7DE27365E7800F07EE5 /* Networks */,
 				9228A1DC2725C12F00A3941D /* Models */,
 				926AEB57271439FF00E274D8 /* Components */,
 				926AEB56271439F700E274D8 /* VCs */,
@@ -214,6 +229,7 @@
 				92882DA72709DF8200580348 /* UIColor+.swift */,
 				92882DB0270AAF1300580348 /* UITextField+.swift */,
 				92AF261B272DBB13005D0AE0 /* UIWindow+.swift */,
+				92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +250,35 @@
 				9228A1D02725BE5F00A3941D /* VCs */,
 			);
 			path = Youtube;
+			sourceTree = "<group>";
+		};
+		92D5C7DE27365E7800F07EE5 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				92D5C7DF27365F0900F07EE5 /* APIConstants.swift */,
+				92D5C7E12736601700F07EE5 /* NetworkResult.swift */,
+				92D5C8142736E5D000F07EE5 /* Models */,
+				92D5C8132736E5C400F07EE5 /* Services */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		92D5C8132736E5C400F07EE5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				92D5C80F2736E36300F07EE5 /* SignInService.swift */,
+				92D5C8112736E36C00F07EE5 /* SignUpService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		92D5C8142736E5D000F07EE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */,
+				92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		92F740F62718978E00D1F975 /* Login */ = {
@@ -328,7 +373,9 @@
 				9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */,
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
+				92D5C7E62736628B00F07EE5 /* LoginResponseData.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
+				92D5C8102736E36300F07EE5 /* SignInService.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
 				92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */,
 				9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */,
@@ -336,16 +383,21 @@
 				9228A1D62725BEC800A3941D /* VideoTVC.swift in Sources */,
 				92882DA62709D80000580348 /* UIView+.swift in Sources */,
 				9228A1E42725D1C600A3941D /* SortCVC.swift in Sources */,
+				92D5C7E027365F0900F07EE5 /* APIConstants.swift in Sources */,
 				92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */,
 				926AEB5927143A2F00E274D8 /* SignTextField.swift in Sources */,
 				9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
+				92D5C7E8273669AD00F07EE5 /* UIViewcontroller+.swift in Sources */,
 				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
+				92D5C8122736E36C00F07EE5 /* SignUpService.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
 				92F740F52718966600D1F975 /* TabBarController.swift in Sources */,
+				92D5C7E22736601700F07EE5 /* NetworkResult.swift in Sources */,
 				92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
 				92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */,
+				92D5C80E2736DF2E00F07EE5 /* SignUpResponseData.swift in Sources */,
 				92F740FE2718987000D1F975 /* AddVC.swift in Sources */,
 				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
 				92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */,
@@ -489,7 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PU64TS56AD;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Youtube-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,7 +568,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PU64TS56AD;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Youtube-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
