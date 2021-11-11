@@ -194,29 +194,33 @@ extension SignInVC: UITextFieldDelegate {
 
 extension SignInVC {
     func requestSignIn() {
-        LoginService.shared.login(email: emailTextField.text ?? "",
-                                      password: passwordTextField.text ?? "") { [self] responseData in
-            switch  responseData {
-            case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
-                if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.signinUserName)
-                    self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+        UserService.shared.signIn(email: emailTextField.text ?? "",
+                                      password: passwordTextField.text ?? "") { [self] response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? UserResponseModel else { return }
+                
+                self.makeAlert(title: "로그인", message: data.message, okAction: { _ in
+                    if data.status == 200 {
+                        UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.signinUserName)
+                        
                         let dvc = ConfirmVC()
                         dvc.modalPresentationStyle = .fullScreen
-                        self.present(dvc, animated: true, completion: nil)
-                    })
-                }
-            case .requestErr(let loginResponse):
-                print("requestERR \(loginResponse)")
-                guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                        self.present(dvc, animated: true, completion: {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        })
+                    }
+                })
+            case .requestErr(let data):
+                print("requestERR \(data)")
+                guard let data = data as? UserResponseModel else { return }
+                self.makeAlert(title: "로그인", message: data.message, okAction: { _ in
                     setTextFieldEmpty()
                 })
-            case .pathErr(let loginResponse):
+            case .pathErr(let data):
                 print("pathErr")
-                guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                guard let data = data as? UserResponseModel else { return }
+                self.makeAlert(title: "로그인", message: data.message, okAction: { _ in
                     setTextFieldEmpty()
                 })
             case .serverErr:

@@ -26,16 +26,17 @@
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
 		92A049BE273D572900AF83C2 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A049BD273D572900AF83C2 /* UserDefaults.swift */; };
+		92A049C0273D8E0300AF83C2 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A049BF273D8E0300AF83C2 /* UserRouter.swift */; };
+		92A049C2273D8F1D00AF83C2 /* UserResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A049C1273D8F1D00AF83C2 /* UserResponseModel.swift */; };
+		92A049C4273D90C900AF83C2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A049C3273D90C900AF83C2 /* UserService.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
 		92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF261B272DBB13005D0AE0 /* UIWindow+.swift */; };
 		92B033CE273435DF0001190C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 92B033CD273435DF0001190C /* Alamofire */; };
 		92D5C7E027365F0900F07EE5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7DF27365F0900F07EE5 /* APIConstants.swift */; };
 		92D5C7E22736601700F07EE5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E12736601700F07EE5 /* NetworkResult.swift */; };
-		92D5C7E62736628B00F07EE5 /* LoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */; };
+		92D5C7E62736628B00F07EE5 /* SignInRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E52736628B00F07EE5 /* SignInRequestModel.swift */; };
 		92D5C7E8273669AD00F07EE5 /* UIViewcontroller+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */; };
-		92D5C80E2736DF2E00F07EE5 /* SignUpResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */; };
-		92D5C8102736E36300F07EE5 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C80F2736E36300F07EE5 /* SignInService.swift */; };
-		92D5C8122736E36C00F07EE5 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C8112736E36C00F07EE5 /* SignUpService.swift */; };
+		92D5C80E2736DF2E00F07EE5 /* SignUpRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C80D2736DF2E00F07EE5 /* SignUpRequestModel.swift */; };
 		92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B562272A8CE3002AF0B0 /* TopView.swift */; };
 		92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */; };
 		92F740F52718966600D1F975 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F740F42718966600D1F975 /* TabBarController.swift */; };
@@ -67,15 +68,16 @@
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		92A049BD273D572900AF83C2 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		92A049BF273D8E0300AF83C2 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		92A049C1273D8F1D00AF83C2 /* UserResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseModel.swift; sourceTree = "<group>"; };
+		92A049C3273D90C900AF83C2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		92AF261B272DBB13005D0AE0 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		92D5C7DF27365F0900F07EE5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		92D5C7E12736601700F07EE5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseData.swift; sourceTree = "<group>"; };
+		92D5C7E52736628B00F07EE5 /* SignInRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestModel.swift; sourceTree = "<group>"; };
 		92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+.swift"; sourceTree = "<group>"; };
-		92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseData.swift; sourceTree = "<group>"; };
-		92D5C80F2736E36300F07EE5 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
-		92D5C8112736E36C00F07EE5 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		92D5C80D2736DF2E00F07EE5 /* SignUpRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestModel.swift; sourceTree = "<group>"; };
 		92D8B562272A8CE3002AF0B0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		92D8B564272A910A002AF0B0 /* SubscriptionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsHeaderView.swift; sourceTree = "<group>"; };
 		92F740F42718966600D1F975 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				92D5C7DF27365F0900F07EE5 /* APIConstants.swift */,
 				92D5C7E12736601700F07EE5 /* NetworkResult.swift */,
+				92A049BF273D8E0300AF83C2 /* UserRouter.swift */,
 				92D5C8142736E5D000F07EE5 /* Models */,
 				92D5C8132736E5C400F07EE5 /* Services */,
 			);
@@ -269,8 +272,7 @@
 		92D5C8132736E5C400F07EE5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				92D5C80F2736E36300F07EE5 /* SignInService.swift */,
-				92D5C8112736E36C00F07EE5 /* SignUpService.swift */,
+				92A049C3273D90C900AF83C2 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -278,8 +280,9 @@
 		92D5C8142736E5D000F07EE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				92D5C7E52736628B00F07EE5 /* LoginResponseData.swift */,
-				92D5C80D2736DF2E00F07EE5 /* SignUpResponseData.swift */,
+				92D5C7E52736628B00F07EE5 /* SignInRequestModel.swift */,
+				92D5C80D2736DF2E00F07EE5 /* SignUpRequestModel.swift */,
+				92A049C1273D8F1D00AF83C2 /* UserResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,12 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9228A1DE2725C13E00A3941D /* VideoDataModel.swift in Sources */,
+				92A049C0273D8E0300AF83C2 /* UserRouter.swift in Sources */,
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
-				92D5C7E62736628B00F07EE5 /* LoginResponseData.swift in Sources */,
+				92D5C7E62736628B00F07EE5 /* SignInRequestModel.swift in Sources */,
 				92A049BE273D572900AF83C2 /* UserDefaults.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
-				92D5C8102736E36300F07EE5 /* SignInService.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,
 				92D8B565272A910A002AF0B0 /* SubscriptionsHeaderView.swift in Sources */,
 				9228A1E22725CEB500A3941D /* ChannelDataModel.swift in Sources */,
@@ -393,15 +396,16 @@
 				9228A1E02725CC1300A3941D /* ChannelCVC.swift in Sources */,
 				92882D8D2709A09600580348 /* SceneDelegate.swift in Sources */,
 				92D5C7E8273669AD00F07EE5 /* UIViewcontroller+.swift in Sources */,
+				92A049C4273D90C900AF83C2 /* UserService.swift in Sources */,
+				92A049C2273D8F1D00AF83C2 /* UserResponseModel.swift in Sources */,
 				92F741022718999D00D1F975 /* LibraryVC.swift in Sources */,
-				92D5C8122736E36C00F07EE5 /* SignUpService.swift in Sources */,
 				92882DB1270AAF1300580348 /* UITextField+.swift in Sources */,
 				92F740F52718966600D1F975 /* TabBarController.swift in Sources */,
 				92D5C7E22736601700F07EE5 /* NetworkResult.swift in Sources */,
 				92F740FA271897DF00D1F975 /* HomeVC.swift in Sources */,
 				92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */,
 				92D8B563272A8CE3002AF0B0 /* TopView.swift in Sources */,
-				92D5C80E2736DF2E00F07EE5 /* SignUpResponseData.swift in Sources */,
+				92D5C80E2736DF2E00F07EE5 /* SignUpRequestModel.swift in Sources */,
 				92F740FE2718987000D1F975 /* AddVC.swift in Sources */,
 				92882DA82709DF8200580348 /* UIColor+.swift in Sources */,
 				92F741002718992300D1F975 /* SubscriptionsVC.swift in Sources */,

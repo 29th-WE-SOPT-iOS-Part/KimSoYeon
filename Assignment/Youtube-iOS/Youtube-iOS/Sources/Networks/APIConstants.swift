@@ -6,9 +6,15 @@
 //
 
 import Foundation
+
 struct APIConstants {
+    
+    // MARK: - Base URL
+    
     static let baseURL = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api"
     
-    static let loginURL = baseURL + "/user/login"
-    static let signupURL = baseURL + "/user/signup"
+    // MARK: - /user
+    
+    static let signinURL = "/user/login"
+    static let signupURL = "/user/signup"
 }
