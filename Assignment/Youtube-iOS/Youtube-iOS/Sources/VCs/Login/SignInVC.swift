@@ -200,6 +200,7 @@ extension SignInVC {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.signinUserName)
                     self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
                         let dvc = ConfirmVC()
                         dvc.modalPresentationStyle = .fullScreen

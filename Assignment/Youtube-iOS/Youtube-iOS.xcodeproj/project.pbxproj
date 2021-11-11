@@ -25,6 +25,7 @@
 		92882DAB2709E2EA00580348 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAA2709E2EA00580348 /* SignUpVC.swift */; };
 		92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DAC2709E41A00580348 /* ConfirmVC.swift */; };
 		92882DB1270AAF1300580348 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92882DB0270AAF1300580348 /* UITextField+.swift */; };
+		92A049BE273D572900AF83C2 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A049BD273D572900AF83C2 /* UserDefaults.swift */; };
 		92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A982D927185C70006C75CB /* ConfirmButton.swift */; };
 		92AF261C272DBB13005D0AE0 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF261B272DBB13005D0AE0 /* UIWindow+.swift */; };
 		92B033CE273435DF0001190C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 92B033CD273435DF0001190C /* Alamofire */; };
@@ -65,6 +66,7 @@
 		92882DAA2709E2EA00580348 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		92882DAC2709E41A00580348 /* ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
 		92882DB0270AAF1300580348 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		92A049BD273D572900AF83C2 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		92A982D927185C70006C75CB /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		92AF261B272DBB13005D0AE0 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		92D5C7DF27365F0900F07EE5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				92882DB0270AAF1300580348 /* UITextField+.swift */,
 				92AF261B272DBB13005D0AE0 /* UIWindow+.swift */,
 				92D5C7E7273669AD00F07EE5 /* UIViewcontroller+.swift */,
+				92A049BD273D572900AF83C2 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				92A982DA27185C70006C75CB /* ConfirmButton.swift in Sources */,
 				92882DAD2709E41A00580348 /* ConfirmVC.swift in Sources */,
 				92D5C7E62736628B00F07EE5 /* LoginResponseData.swift in Sources */,
+				92A049BE273D572900AF83C2 /* UserDefaults.swift in Sources */,
 				92882D8F2709A09600580348 /* SignInVC.swift in Sources */,
 				92D5C8102736E36300F07EE5 /* SignInService.swift in Sources */,
 				92F740FC2718982400D1F975 /* ShortsVC.swift in Sources */,

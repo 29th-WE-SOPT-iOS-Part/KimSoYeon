@@ -196,6 +196,7 @@ extension SignUpVC {
             case .success(let signupResponse):
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.signinUserName)
                     self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
                         let dvc = ConfirmVC()
                         dvc.modalPresentationStyle = .fullScreen
