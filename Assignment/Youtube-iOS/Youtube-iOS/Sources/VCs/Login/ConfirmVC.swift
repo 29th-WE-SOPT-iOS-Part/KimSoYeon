@@ -43,7 +43,7 @@ extension ConfirmVC {
     func initUI() {
         view.backgroundColor = .white
         
-        if let name = userName {
+        if let name = UserDefaults.standard.string(forKey: UserDefaults.Keys.signinUserName) {
             welcomeLabel.text = "\(name)님\n환영합니다!"
         }
         welcomeLabel.font = .systemFont(ofSize: 26, weight: .semibold)

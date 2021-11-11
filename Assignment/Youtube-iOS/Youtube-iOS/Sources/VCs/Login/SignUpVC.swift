@@ -21,7 +21,7 @@ class SignUpVC: UIViewController {
     let titleLabel = UILabel()
     
     let nameTextField = SignTextField(placeholder: "이름을 입력해주세요.")
-    let contactTextField = SignTextField(placeholder: "이메일 또는 휴대전화")
+    let emailTextField = SignTextField(placeholder: "이메일 또는 휴대전화")
     let passwordTextField = SignTextField(placeholder: "비밀번호 입력")
     
     let showPasswordButton = UIButton()
@@ -70,7 +70,7 @@ extension SignUpVC {
     
     func setConstraints() {
         view.addSubviews([logoImage, titleLabel,
-                          nameTextField, contactTextField, passwordTextField,
+                          nameTextField, emailTextField, passwordTextField,
                           showPasswordButton, nextButton])
         
         logoImage.snp.makeConstraints { make in
@@ -89,14 +89,14 @@ extension SignUpVC {
             make.height.equalTo(48)
         }
         
-        contactTextField.snp.makeConstraints { make in
+        emailTextField.snp.makeConstraints { make in
             make.top.equalTo(nameTextField.snp.bottom).offset(17)
             make.leading.trailing.equalToSuperview().inset(22)
             make.height.equalTo(48)
         }
         
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(contactTextField.snp.bottom).offset(17)
+            make.top.equalTo(emailTextField.snp.bottom).offset(17)
             make.leading.trailing.equalToSuperview().inset(22)
             make.height.equalTo(48)
         }
@@ -150,14 +150,7 @@ extension SignUpVC {
     
     @objc
     private func touchUpNext() {
-        let dvc = ConfirmVC()
-        dvc.userName = nameTextField.text
-        dvc.modalPresentationStyle = .fullScreen
-        present(dvc, animated: true) {
-            self.nameTextField.text = nil
-            self.contactTextField.text = nil
-            self.passwordTextField.text = nil
-        }
+        requestSignUp()
     }
 }
 
@@ -166,8 +159,14 @@ extension SignUpVC {
 extension SignUpVC: UITextFieldDelegate {
     func setTextField() {
         nameTextField.delegate = self
-        contactTextField.delegate = self
+        emailTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    func setTextFieldEmpty() {
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0.text = ""
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -176,12 +175,55 @@ extension SignUpVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.hasText && contactTextField.hasText && passwordTextField.hasText {
+        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
             nextButton.isEnabled = true
             nextButton.backgroundColor = .googleBlue
         } else {
             nextButton.isEnabled = false
             nextButton.backgroundColor = .gray
+        }
+    }
+}
+
+// MARK: - Network
+
+extension SignUpVC {
+    func requestSignUp() {
+        UserService.shared.signUp(email: emailTextField.text ?? "",
+                                        name: nameTextField.text ?? "",
+                                     password: passwordTextField.text ?? "") { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? UserResponseModel else { return }
+                
+                self.makeAlert(title: "회원가입", message: data.message, okAction: { _ in
+                    if data.status == 200 {
+                        UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.signinUserName)
+                        
+                        let dvc = ConfirmVC()
+                        dvc.modalPresentationStyle = .fullScreen
+                        self.present(dvc, animated: true, completion: {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        })
+                    }
+                })
+            case .requestErr(let data):
+                print("requestERR \(data)")
+                guard let data = data as? UserResponseModel else { return }
+                self.makeAlert(title: "회원가입", message: data.message ,okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+            case .pathErr(let data):
+                print("pathErr")
+                guard let data = data as? UserResponseModel else { return }
+                self.makeAlert(title: "회원가입", message: data.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
