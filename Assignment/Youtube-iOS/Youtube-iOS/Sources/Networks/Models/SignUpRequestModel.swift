@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - RequestModel
+
 struct SignUpRequestModel: Codable {
     let email, name, password: String
 }

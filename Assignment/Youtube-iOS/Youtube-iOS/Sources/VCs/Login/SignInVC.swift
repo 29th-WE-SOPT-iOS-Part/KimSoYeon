@@ -129,19 +129,6 @@ extension SignInVC {
         
         nextButton.addTarget(self, action: #selector(touchUpNext), for: .touchUpInside)
     }
-    
-    func loginAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default){ _ in
-            let dvc = ConfirmVC()
-            dvc.modalPresentationStyle = .fullScreen
-            self.present(dvc, animated: true, completion: nil)
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
 }
 
 // MARK: - @objc

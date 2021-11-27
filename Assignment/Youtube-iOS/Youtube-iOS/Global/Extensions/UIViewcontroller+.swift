@@ -8,14 +8,15 @@
 import UIKit
 
 extension UIViewController {
-    func makeAlert(title : String,
-                   message : String,
-                   okAction : ((UIAlertAction) -> Void)? = nil,
-                   completion : (() -> Void)? = nil) {
+    func makeAlert(title: String,
+                   message: String,
+                   okAction: ((UIAlertAction) -> Void)? = nil,
+                   completion: (() -> Void)? = nil) {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         
-        let alertViewController = UIAlertController(title: title, message: message,
+        let alertViewController = UIAlertController(title: title,
+                                                    message: message,
                                                     preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "확인", style: .default, handler: okAction)

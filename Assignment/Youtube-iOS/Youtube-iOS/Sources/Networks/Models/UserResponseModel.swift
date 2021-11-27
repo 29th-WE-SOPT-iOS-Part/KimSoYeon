@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - ResponseModel
+
 struct UserResponseModel: Codable {
     let status: Int
     let success: Bool
