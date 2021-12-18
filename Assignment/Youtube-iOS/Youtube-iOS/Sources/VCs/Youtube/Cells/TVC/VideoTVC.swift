@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol VideoCellDelegate {
+    func didTapThumnailImage(index: Int)
+}
+
 class VideoTVC: UITableViewCell {
     static let identifier = "VideoTVC"
 
@@ -21,12 +25,18 @@ class VideoTVC: UITableViewCell {
     
     @IBOutlet weak var moreButton: UIButton!
     
+    // MARK: - Properties
+    
+    var videoCellDelegate: VideoCellDelegate?
+    var index = 0
+    
     // MARK: - Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         initUI()
+        setGesture()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +45,7 @@ class VideoTVC: UITableViewCell {
 }
 
 extension VideoTVC {
-    func initUI() {
+    private func initUI() {
         thumnailImageView.contentMode = .scaleAspectFill
         
         titleLabel.numberOfLines = 2
@@ -50,11 +60,24 @@ extension VideoTVC {
         moreButton.setImage(UIImage(named: "moreMenuIcon"), for: .normal)
     }
     
-    func setData(thumnailImage: String, profileImage: String, title: String, channelName: String, views: Int, date: Int) {
+    func setData(index: Int, thumnailImage: String, profileImage: String, title: String, channelName: String, views: Int, date: Int) {
+        self.index = index
+        
         thumnailImageView.image = UIImage(named: thumnailImage)
         profileImageView.image = UIImage(named: profileImage)
         
         titleLabel.text = title
         descriptionLabel.text = "\(channelName) \(views)회 \(date)주 전"
+    }
+    
+    private func setGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedImageView(gestureRecognizer:)))
+        thumnailImageView.isUserInteractionEnabled = true
+        thumnailImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc
+    func tappedImageView(gestureRecognizer: UIGestureRecognizer) {
+        self.videoCellDelegate?.didTapThumnailImage(index: index)
     }
 }
