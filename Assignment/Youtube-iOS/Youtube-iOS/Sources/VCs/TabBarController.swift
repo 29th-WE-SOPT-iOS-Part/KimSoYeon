@@ -46,7 +46,7 @@ extension TabBarController {
         let addTab = AddVC()
         addTab.tabBarItem = UITabBarItem(title: "추가", image: UIImage(named: "plueCircleIcon"), selectedImage: UIImage(named: "plueCircleIcon"))
         
-        let subscribeTab = SubscriptionsVC()
+        let subscribeTab = UINavigationController(rootViewController: SubscriptionsVC())
         subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: UIImage(named: "subscriptionsIcon"), selectedImage: UIImage(named: "subscriptionsIconFill"))
         
         let libraryTab = LibraryVC()

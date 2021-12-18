@@ -24,6 +24,13 @@ class SubscriptionsVC: UIViewController {
 
     // MARK: - Life Cycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,12 +88,10 @@ extension SubscriptionsVC {
         
         let videoNib = UINib(nibName: VideoTVC.identifier, bundle: nil)
         videoTableView.register(videoNib, forCellReuseIdentifier: VideoTVC.identifier)
-        
-        videoTableView.allowsSelection = false
     }
 }
 
-// MARK: - TopViewDelegate
+// MARK: - Protocols
 
 extension SubscriptionsVC: TopViewDelegate {
     func didTapProfileIcon() {
@@ -96,13 +101,27 @@ extension SubscriptionsVC: TopViewDelegate {
     }
 }
 
-
+extension SubscriptionsVC: VideoCellDelegate {
+    func didTapThumnailImage(index: Int) {
+        let dvc = DetailVC()
+        dvc.videoTitle = videoList[index].title
+        dvc.videoDescription = "\(videoList[index].channelName) \(videoList[index].views)만 회 \(videoList[index].date)전"
+        dvc.modalTransitionStyle = .coverVertical
+        dvc.modalPresentationStyle = .fullScreen
+        present(dvc, animated: true, completion: nil)
+    }
+}
 
 // MARK: - UITableView Delegate
 
 extension SubscriptionsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = DetailVC()
+        self.navigationController?.pushViewController(dvc, animated: true)
     }
 }
 
@@ -116,7 +135,9 @@ extension SubscriptionsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoTVC.identifier) as? VideoTVC else { return UITableViewCell() }
         let data = videoList[indexPath.row]
-        cell.setData(thumnailImage: data.thumbnailImage, profileImage: data.profileImage, title: data.title, channelName: data.channelName, views: data.views, date: data.date)
+        cell.setData(index: indexPath.row, thumnailImage: data.thumbnailImage, profileImage: data.profileImage, title: data.title, channelName: data.channelName, views: data.views, date: data.date)
+        cell.videoCellDelegate = self
+        cell.selectionStyle = .none
         return cell
     }
 }
